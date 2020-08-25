@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListViewXamarin"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             x:Class="ListViewXamarin.MainPage">
+    <ContentPage.BindingContext>
+        <local:ContactsViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Behaviors>
+        <local:Behavior/>
+    </ContentPage.Behaviors>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:IndexToColorConverter x:Key="IndexToColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding ContactsInfo}" ItemSize="50" DragStartMode="OnHold">
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10,0,0,0" BackgroundColor="{Binding ., Converter={StaticResource IndexToColorConverter}, ConverterParameter={x:Reference Name=listView}}">
+                            <Label LineBreakMode="NoWrap" VerticalTextAlignment="End" Text="{Binding ContactName}"/>
+                            <Label Grid.Row="1" VerticalTextAlignment="Start" Text="{Binding ContactNumber}"/>
+                        </Grid>
+                    </DataTemplate>
+                </syncfusion:SfListView.ItemTemplate>
+            </syncfusion:SfListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
