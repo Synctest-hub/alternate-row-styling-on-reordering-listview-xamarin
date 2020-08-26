@@ -1,6 +1,6 @@
 # How to update alternate row styling on reordering in Xamarin.Forms ListView (SfListView)
 
-You can update the alternate row style for [ListViewItem](https://help.syncfusion.com/cr/cref_files/xamarin/Syncfusion.SfListView.XForms~Syncfusion.ListView.XForms.ListViewItem.html)safter reordering in Xamarin.Forms [SfListView](https://help.syncfusion.com/xamarin/listview/overview).
+You can update the alternate row style for [ListViewItems](https://help.syncfusion.com/cr/cref_files/xamarin/Syncfusion.SfListView.XForms~Syncfusion.ListView.XForms.ListViewItem.html) after reordering in Xamarin.Forms [SfListView](https://help.syncfusion.com/xamarin/listview/overview).
 
 You can also refer the following article.
 
